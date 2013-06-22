@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="copyright" content="maichanchinhls@gmail.com"/>
+    <meta name="author" lang="vi" content="Mai Chan Chinh"/>
+    <script src="../js/jquery.1.7.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+            $("#show").click(function(){
+                $("p").show();
+            });
+            $("#hidetime").click(function(){
+                $("p.time").hide(1000);
+            });
+            $("button#toggle").click(function(){
+                $("p.toggle").toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>If you click on the "Hide" button, I will disappear.</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <br />
+    <button id="hidetime">Hide speed 1000ms</button>
+    <p class="time">This is a paragraph with little content.</p>
+    <p class="time">This is another small paragraph.</p>
+    <br />
+    <button id="toggle">Toggle</button>
+    <p class="toggle">This is a paragraph with little content.</p>
+    <p class="toggle">This is another small paragraph.</p>
+</body>
+</html>

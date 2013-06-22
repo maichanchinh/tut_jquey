@@ -1,0 +1,2 @@
+<h2>jQuery và AJAX</h2>
+<p id="p1"> Đây là một số văn bản trong một đoạn.</p>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="copyright" content="maichanchinhls@gmail.com"/>
+    <meta name="author" lang="vi" content="Mai Chan Chinh"/>
+    <script src="../js/jquery.1.7.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#div1").load("data/data.txt",function(responseTxt,statusTxt,xhr){
+                    if(statusTxt=="success")
+                        alert("Load thành công!");
+                    if(statusTxt=="error")
+                        alert("Error: "+xhr.status+": "+xhr.statusText);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="div1"><h2>Nội dung chưa được Load AJAX</h2></div>
+    <button>lấy nội dung</button>
+</body>
+</html>

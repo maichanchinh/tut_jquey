@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="copyright" content="maichanchinhls@gmail.com"/>
+    <meta name="author" lang="vi" content="Mai Chan Chinh"/>
+    <script src="../js/jquery.1.7.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button#btn1").click(function(){
+                $("p").css("background-color","yellow");
+            });
+            $("button#btn2").click(function(){
+                $("p").css({"background-color":"yellow","font-size":"24px"});
+            });
+        })
+    </script>
+</head>
+<body>
+    <h2>This is a heading</h2>
+    <p style="background-color:#ff0000">Nội dung</p>
+    <p style="background-color:#00ff00">Nội dung</p>
+    <p style="background-color:#0000ff">Nội dung</p>
+    <p>Nội dung</p>
+    <button id="btn1">Gián background-color cho thẻ p</button>
+    <button id="btn2">Gián nhiều thuộc tính css cho thẻ p</button>
+</body>
+</html>

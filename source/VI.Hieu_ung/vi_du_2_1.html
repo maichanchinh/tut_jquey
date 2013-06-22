@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="copyright" content="maichanchinhls@gmail.com"/>
+    <meta name="author" lang="vi" content="Mai Chan Chinh"/>
+    <script src="../js/jquery.1.7.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button#fadein").click(function(){
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000);
+            });
+            $("button#fadeout").click(function(){
+                $("#div1").fadeOut();
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeOut(3000);
+            });
+        });
+    </script>
+</head>
+<body>
+<p>Demonstrate fadeIn() and fadeOut() with different parameters.</p>
+<button id="fadein">Click to fade in boxes</button><button id="fadeout">Click to fade out boxes</button>
+<br><br>
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+</body>
+</html>
