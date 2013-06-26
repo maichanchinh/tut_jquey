@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Hướng dẫn tạo Tab đơn giản bằng jQuery</title>
+	<link rel="stylesheet" type="text/css" href="css/css.css" />
+	<link href="http://y2graphic.com/templates/v2/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	
+</head>
+
+<body>
+<div id="deadline">
+	<h1> Hướng dẫn tạo Tab đơn giản bằng jQuery</h1>
+</div>
+<div id="tabContaier">
+	<ul>
+    	<li><a class="active" href="#tab1">Xã hội</a></li>
+    	<li><a href="#tab2">Thế giới</a></li>
+    	<li><a href="#tab3">Văn hoá</a></li>
+		<li><a href="#tab4">Khoa học</a></li>
+    </ul>
+	
+    <div class="tabDetails">
+	
+    	<div id="tab1" class="tabContents">
+        	<h1>Cháy nhà hàng trên phố cổ Hà Nội</h1>
+            <p>8h30 sáng 30/5, khi các đầu bếp của nhà hàng Indochine 16 Nam Ngư (Hoàn Kiếm, Hà Nội) đang nấu ăn thì ngọn lửa bất ngờ bốc lên nghi ngút từ gian bếp tầng 2.</p>
+            <p>Đầu bếp cùng người dân nhanh chóng khống chế, nhưng lửa càng lúc càng lớn và lan toàn bộ khu bếp rộng khoảng 16 m2. Cột khói bốc cao, bao trùm tầng 2 của nhà hàng 2 tầng khiến cư dân xung quanh náo loạn.</p>	
+        </div>
+		
+    	<div id="tab2" class="tabContents">
+        	<h1>Biển Đông là trọng tâm Hội nghị an ninh châu Á</h1>
+            <p>Hội nghị được Viện Nghiên cứu Chiến lược Quốc tế (IISS) có trụ sở tại Anh tổ chức và được biết đến nhiều với tên gọi Đối thoại Shangri-La, vì nó diễn ra hàng năm tại khách sạn cùng tên ở Singapore. Đây là diễn đàn an ninh liên chính phủ có sự tham gia của các quan chức quốc phòng hàng đầu khu vực và thế giới.</p>
+            <p>Hội nghị năm nay diễn ra từ 1 tới 3/6, với sự tham gia của đại diện tới từ 28 quốc gia châu Á - Thái Bình dương cùng với Anh, Pháp, Nga và Mỹ. Đây là lần thứ 11 Đối thoại Shangri-La được tổ chức. Chủ đề thảo luận của hội nghị gồm các chương trình hiện đại hóa quân sự, cân bằng lực lượng toàn cầu, cấu trúc an ninh khu vực, chống các mối đe dọa xuyên quốc gia, đối phó thảm họa thiên nhiên. Trong số này, vấn đề tranh chấp chủ quyền trên Biển Đông sẽ được nhấn mạnh.</p>
+        </div>
+		
+    	<div id="tab3" class="tabContents">
+        	<h1>Chương Tử Di quyết kiện báo đưa tin đồn 'đi khách'</h1>
+            <p>Mới đây, một số tờ báo Hong Kong đưa tin ngôi sao "Ngọa hổ tàng long" đang "bị điều tra, cấm xuất cảnh" vì có mối quan hệ đổi chác tình - tiền với cựu ủy viên Bộ Chính trị Trung Quốc Bạc Hy Lai. Nhân vật này bị cách chức hồi tháng 4 và đang bị điều tra vì những sai phạm nghiêm trọng. Phía Chương Tử Di tỏ thái độ phẫn nộ và cho biết sẽ kiên quyết làm tới cùng.</p>
+        </div>
+		
+		<div id="tab4" class="tabContents">
+        	<h1>Việt Nam đón hiện tượng thiên văn thế kỷ </h1>
+            <p>Hiện tượng thiên văn có tên là Venus transit diễn ra vào ngày 6/6. Hầu hết các nơi trên thế giới từ châu Mỹ, châu Á, châu Âu tới châu Phi đều quan sát được.</p>
+            <p>Trên thế giới, phần lớn của châu Á và châu Âu thấy hiện tượng vào sáng ngày 6/6 khi mặt trời vừa ló rạng ở phía đông, khi đó sao Kim đã nằm trong đĩa của mặt trời. Còn ở Bắc Mỹ, người quan sát sẽ chứng kiến thời điểm sao Kim bắt đầu đi ngang qua đĩa mặt trời buổi chiều và buổi tối của ngày 5/6, ở chân trời phía tây.</p>
+        </div>
+		
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".tabContents").hide(); // Ẩn toàn bộ nội dung của tab
+		$(".tabContents:first").show(); // Mặc định sẽ hiển thị tab1
+		
+		$("#tabContaier ul li a").click(function(){ //Khai báo sự kiện khi click vào một tab nào đó
+			
+			var activeTab = $(this).attr("href"); 
+			$("#tabContaier ul li a").removeClass("active"); 
+			$(this).addClass("active"); 
+			$(".tabContents").hide(); 
+			$(activeTab).fadeIn(); 
+		});
+	});
+</script>	
+</body>
+</html>

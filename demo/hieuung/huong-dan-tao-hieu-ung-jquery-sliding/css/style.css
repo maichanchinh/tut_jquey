@@ -1,0 +1,38 @@
+html,body{margin:0;padding:0;background:url(../images/main_background.jpg) repeat;}
+
+#container { 
+	width:1000px; 
+	margin:0 auto; 
+	padding-top:10px }
+
+#container h1{
+	color:#FFFFFF;
+	text-align:center;
+	font-size:28px;}
+
+.thumb {
+    width:300px;
+    margin:0 30px 30px 0;
+    overflow:hidden;
+    float:left;
+    position:relative;
+	height:200px;
+	background-color:#000;
+	cursor:pointer;}
+
+.thumb p{
+	font-size:12px;
+	color:#fff;
+	padding:5px;
+	text-align:justify;}
+	
+.thumb img { 
+	display:block; }
+
+.top { 
+	position:absolute; 
+	top:0; 
+	left:0;}
+
+.last { 
+	margin-right:0; }
